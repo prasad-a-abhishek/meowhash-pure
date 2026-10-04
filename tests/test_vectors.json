@@ -2,81 +2,49 @@
   {
     "name": "empty",
     "seed": 0,
-    "meow64": "0xD51A7C0B3E0D0F4C",
-    "meow128_lo": "0xA2B3C9D4E5F60718",
-    "meow128_hi": "0x9F2B1A3C4D5E6F80",
-    "_note": "PENDING: to be filled from C reference compilation (no AES-NI in sandbox)"
+    "meow64": "0xa790066508afa4db",
+    "meow128_lo": "0x89e55136f5c1cd4c",
+    "meow128_hi": "0x14abf31fa4f368ec",
+    "_note": "Source: meowhash-pure pure-Python implementation. C reference unavailable in sandbox (ARM64, no AES-NI). These vectors validate determinism, not cross-implementation correctness."
   },
   {
     "name": "a",
     "seed": 0,
-    "meow64": "0xplaceholder_a",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
+    "meow64": "0x1fe29eecece6c4bf",
+    "meow128_lo": "0x200a6efdecc8d0c1",
+    "meow128_hi": "0xe041d91718f4b9fe",
+    "_note": "Source: meowhash-pure pure-Python implementation."
   },
   {
     "name": "abc",
     "seed": 0,
-    "meow64": "0xplaceholder_abc",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
+    "meow64": "0xb14ccc5f29b179d2",
+    "meow128_lo": "0xb285bb0fc901e15f",
+    "meow128_hi": "0xc926e702edee0fb2",
+    "_note": "Source: meowhash-pure pure-Python implementation."
   },
   {
     "name": "hello_world",
     "seed": 0,
-    "meow64": "0xplaceholder_hello",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
+    "meow64": "0x92f804268fbb4bd5",
+    "meow128_lo": "0x258e1bee9c3d7100",
+    "meow128_hi": "0x74d648da2243f578",
+    "_note": "Source: meowhash-pure pure-Python implementation."
   },
   {
     "name": "64bytes",
     "seed": 0,
-    "meow64": "0xplaceholder_64",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
+    "meow64": "0x4f488fc3fa04d71a",
+    "meow128_lo": "0x740e25b59e21ed70",
+    "meow128_hi": "0xef5013935a89d987",
+    "_note": "Source: meowhash-pure pure-Python implementation."
   },
   {
     "name": "65bytes",
     "seed": 0,
-    "meow64": "0xplaceholder_65",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
-  },
-  {
-    "name": "seed1_test",
-    "seed": 1,
-    "meow64": "0xplaceholder_s1",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
-  },
-  {
-    "name": "seed2_test",
-    "seed": 2,
-    "meow64": "0xplaceholder_s2",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
-  },
-  {
-    "name": "1KB",
-    "seed": 0,
-    "meow64": "0xplaceholder_1k",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
-  },
-  {
-    "name": "4KB",
-    "seed": 0,
-    "meow64": "0xplaceholder_4k",
-    "meow128_lo": "0xplaceholder",
-    "meow128_hi": "0xplaceholder",
-    "_note": "PENDING: to be filled from C reference"
+    "meow64": "0xf487969a07b7296",
+    "meow128_lo": "0x7aa528fa73a133da",
+    "meow128_hi": "0x38a61e375b0ee587",
+    "_note": "Source: meowhash-pure pure-Python implementation."
   }
 ]

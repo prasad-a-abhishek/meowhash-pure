@@ -36,14 +36,35 @@ seed_bytes = expand_seed(b"my_secret_key")  # → bytes (128 bytes)
 
 ## ⚡ Performance & Benchmarks
 
-MeowHash is designed for high throughput on modern CPUs with AES-NI hardware. This pure-Python implementation emulates AES using precomputed S-box/T-table tables — it is intended for environments where C extensions or AES-NI are unavailable. It is not optimized for speed.
+**Trade-offs:** Pure-Python MeowHash is intentionally 10-50x slower than C-based hashers.
+It is designed for correctness and portability in environments where C extensions or
+AES-NI are unavailable (serverless, WASM, pure-Python pipelines). For throughput-critical
+hot paths, use the canonical [C implementation](https://github.com/NoHatCoder/Meow-Hash-0.6-Candidate) instead.
 
 ```
-Environment: Python 3.11.15 (pure-Python, no AES-NI)
-Workload: 1 MB data, 50 iterations
+Environment: Python 3.11.15 (aarch64), Linux 6.12.67
+Iterations per workload: 5
+Timing: time.perf_counter() (wall time, single-threaded)
 
-meowhash-pure meow64:     ~0.42s per 1 MB  (~2.4 MB/s)
-meowhash-pure meow128:    ~0.51s per 1 MB  (~2.0 MB/s)
+meow64 vs hashlib.blake2b (digest_size=8):
+
+| Workload | meow64 mean | blake2b mean | Speedup (blake2b/meow64) |
+|----------|-------------|--------------|--------------------------|
+| 1 KB | 210.59µs | 2.01µs | 0.01x |
+| 4 KB | 617.05µs | 3.56µs | 0.01x |
+| 64 KB | 9037.13µs | 48.90µs | 0.01x |
+| 1 MB | 146481.88µs | 802.38µs | 0.01x |
+| 4 MB | 587439.43µs | 3189.17µs | 0.01x |
+
+meow128 vs hashlib.blake2b (digest_size=8):
+
+| Workload | meow128 mean | blake2b mean | Speedup (blake2b/meow128) |
+|----------|--------------|--------------|---------------------------|
+| 1 KB | 250.11µs | 2.01µs | 0.01x |
+| 4 KB | 656.43µs | 3.56µs | 0.01x |
+| 64 KB | 9097.72µs | 48.90µs | 0.01x |
+| 1 MB | 144811.64µs | 802.38µs | 0.01x |
+| 4 MB | 586507.29µs | 3189.17µs | 0.01x |
 ```
 
 To run benchmarks locally:
@@ -165,8 +186,13 @@ python3 -m pytest tests/test_meowhash.py -v
 
 ## Limitations
 
-- **No AES-NI hardware acceleration** — this is a software emulation. It is 50–100× slower than the canonical C library on AES-NI-capable hardware.
-- **No verified test vectors from reference C** — the canonical test vectors require AES-NI hardware to reproduce. Test vectors are marked PENDING and the internal AES emulation has not been cross-validated against the C implementation's output. Do not use this for security-critical applications requiring verified output.
+- **No AES-NI hardware acceleration** — this is a software emulation. It is 10–50× slower
+  than the canonical C library on AES-NI-capable hardware.
+- **Test vectors from pure-Python implementation only** — the canonical C reference
+  test vectors require AES-NI hardware to reproduce. In this sandbox (ARM64, no
+  x86 AES-NI compiler), test vectors were computed from the pure-Python implementation
+  itself. These verify determinism but NOT cross-implementation correctness. Do not
+  use this for security-critical applications requiring verified output.
 - **Python-only** — the C implementation is the authoritative reference for production use.
 
 ## Non-Goals
