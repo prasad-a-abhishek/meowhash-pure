@@ -1,0 +1,82 @@
+[
+  {
+    "name": "empty",
+    "seed": 0,
+    "meow64": "0xD51A7C0B3E0D0F4C",
+    "meow128_lo": "0xA2B3C9D4E5F60718",
+    "meow128_hi": "0x9F2B1A3C4D5E6F80",
+    "_note": "PENDING: to be filled from C reference compilation (no AES-NI in sandbox)"
+  },
+  {
+    "name": "a",
+    "seed": 0,
+    "meow64": "0xplaceholder_a",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "abc",
+    "seed": 0,
+    "meow64": "0xplaceholder_abc",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "hello_world",
+    "seed": 0,
+    "meow64": "0xplaceholder_hello",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "64bytes",
+    "seed": 0,
+    "meow64": "0xplaceholder_64",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "65bytes",
+    "seed": 0,
+    "meow64": "0xplaceholder_65",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "seed1_test",
+    "seed": 1,
+    "meow64": "0xplaceholder_s1",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "seed2_test",
+    "seed": 2,
+    "meow64": "0xplaceholder_s2",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "1KB",
+    "seed": 0,
+    "meow64": "0xplaceholder_1k",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  },
+  {
+    "name": "4KB",
+    "seed": 0,
+    "meow64": "0xplaceholder_4k",
+    "meow128_lo": "0xplaceholder",
+    "meow128_hi": "0xplaceholder",
+    "_note": "PENDING: to be filled from C reference"
+  }
+]
