@@ -11,7 +11,7 @@
 ## Quick Start
 
 ```bash
-pip install git+https://github.com/prasad-a-abhishek/meowhash-pure.git
+pip install "git+https://github.com/prasad-a-abhishek/meowhash-pure.git#egg=meowhash-pure"
 ```
 
 ```python
