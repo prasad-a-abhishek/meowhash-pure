@@ -1,0 +1,90 @@
+{
+  "run_at_unix": 1791159795.0624514,
+  "duration_seconds_per_harness": 60.0,
+  "wall_time_seconds": 272.497,
+  "harness_count": 6,
+  "iterations_total": 5071,
+  "crashes_count": 0,
+  "hangs_count": 0,
+  "oom_count": 0,
+  "harnesses": [
+    {
+      "label": "meow64",
+      "harness": "fuzz/meow64_fuzz.py",
+      "elapsed_seconds": 60.186,
+      "returncode": 0,
+      "timed_out": false,
+      "iterations": 368,
+      "cases": null,
+      "unexpected_uncaught": 0,
+      "mismatches": 0,
+      "log_path": "fuzz/logs/meow64.log",
+      "classification": "clean"
+    },
+    {
+      "label": "meow128",
+      "harness": "fuzz/meow128_fuzz.py",
+      "elapsed_seconds": 60.328,
+      "returncode": 0,
+      "timed_out": false,
+      "iterations": 368,
+      "cases": null,
+      "unexpected_uncaught": 0,
+      "mismatches": 0,
+      "log_path": "fuzz/logs/meow128.log",
+      "classification": "clean"
+    },
+    {
+      "label": "state128",
+      "harness": "fuzz/state128_fuzz.py",
+      "elapsed_seconds": 60.065,
+      "returncode": 0,
+      "timed_out": false,
+      "iterations": 301,
+      "cases": null,
+      "unexpected_uncaught": 0,
+      "mismatches": 0,
+      "log_path": "fuzz/logs/state128.log",
+      "classification": "clean"
+    },
+    {
+      "label": "expand_seed",
+      "harness": "fuzz/expand_seed_fuzz.py",
+      "elapsed_seconds": 62.612,
+      "returncode": 0,
+      "timed_out": false,
+      "iterations": 34,
+      "cases": null,
+      "unexpected_uncaught": 0,
+      "mismatches": 0,
+      "log_path": "fuzz/logs/expand_seed.log",
+      "classification": "clean"
+    },
+    {
+      "label": "invariant21",
+      "harness": "fuzz/invariant21_fuzz.py",
+      "elapsed_seconds": 1.527,
+      "returncode": 0,
+      "timed_out": false,
+      "iterations": 0,
+      "cases": 62,
+      "unexpected_uncaught": 0,
+      "mismatches": 0,
+      "log_path": "fuzz/logs/invariant21.log",
+      "classification": "clean"
+    },
+    {
+      "label": "determinism",
+      "harness": "fuzz/determinism_test.py",
+      "elapsed_seconds": 27.778,
+      "returncode": 0,
+      "timed_out": false,
+      "iterations": 4000,
+      "cases": 4000,
+      "unexpected_uncaught": 0,
+      "mismatches": 0,
+      "log_path": "fuzz/logs/determinism.log",
+      "classification": "clean"
+    }
+  ]
+}

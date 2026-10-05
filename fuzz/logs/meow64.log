@@ -1,0 +1,11 @@
+# cmd: /usr/local/bin/python3 /root/projects/meowhash-pure/.worktrees/t_ed0ae962/fuzz/meow64_fuzz.py --duration 60.0 --seed 12648430
+# elapsed_seconds: 60.186
+# returncode: 0
+# timed_out: False
+
+--- stdout ---
+
+--- stderr ---
+[harness] atheris instrumentation unavailable: module 'atheris' has no attribute 'instrument_funcs'
+[harness] done: {'iterations': 368, 'elapsed_seconds': 60.14502910990268, 'exceptions_caught': 0, 'unexpected_uncaught': 0}
+

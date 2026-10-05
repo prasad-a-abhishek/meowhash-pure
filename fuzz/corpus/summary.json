@@ -1,0 +1,12 @@
+{
+  "corpus_root": "fuzz/corpus",
+  "counts": {
+    "meow64": 113,
+    "meow128": 113,
+    "state128": 117,
+    "expand_seed": 105,
+    "invariant21": 6,
+    "determinism": 1000
+  },
+  "total": 1454
+}
